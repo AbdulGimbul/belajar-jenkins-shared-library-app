@@ -7,6 +7,11 @@ pipeline {
         WEB = "https://www.alterdev.id/portfolio-abdul"
     }
 
+    options {
+        disableConcurrentBuild()
+        timeout(time: 10, unit: 'SECONDS')
+    }
+
     stages {
         stage("Prepare") {
             environment {
