@@ -15,11 +15,6 @@ pipeline {
         password(name: "SECRET", defaultValue: "", description: "Encrypt Key")
     }
 
-    options {
-        disableConcurrentBuilds()
-        timeout(time: 10, unit: 'SECONDS')
-    }
-
     stages {
         stage("Parameter") {
             environment {
