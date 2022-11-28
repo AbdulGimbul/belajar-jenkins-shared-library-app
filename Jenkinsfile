@@ -8,7 +8,7 @@ pipeline {
     }
 
     options {
-        disableConcurrentBuild()
+        disableConcurrentBuilds()
         timeout(time: 10, unit: 'SECONDS')
     }
 
