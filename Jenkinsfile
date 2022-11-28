@@ -1,11 +1,20 @@
 pipeline {
     agent any
+
+    environment {
+        AUTHOR = "Muhamad Abdul Aziz"
+        EMAIL = "azizgimboell@gmail.com"
+        WEB = "https://www.alterdev.id/portfolio-abdul"
+    }
+
     stages {
         stage("Prepare") {
             steps {
+                echo("Author ${AUTHOR}")
+                echo("Email ${EMAIL}")
                 echo("Start Job : ${env.JOB_NAME}")
                 echo("Start Build : ${env.BUILD_NUMBER}")
-                echo("Branch NAme : ${env.BRANCH_NAME}")
+                echo("Branch Name : ${env.BRANCH_NAME}")
             }
         }
         stage("Build") {
