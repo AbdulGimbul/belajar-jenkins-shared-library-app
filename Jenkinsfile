@@ -95,7 +95,7 @@ pipeline {
                 }
             }
             steps {
-                echo("Release it")
+                echo("Release it.")
             }
         }
     }
