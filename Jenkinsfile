@@ -7,10 +7,10 @@ pipeline {
         WEB = "https://www.alterdev.id/portfolio-abdul"
     }
 
-    triggers {
+//     triggers {
 //         cron("*/5 * * * *")
-        pollSCM("*/5 * * * *")
-    }
+//         pollSCM("*/5 * * * *")
+//     }
 
     parameters {
         string(name: "NAME", defaultValue: "Guest", description: "What is your name?")
@@ -75,6 +75,11 @@ pipeline {
             }
         }
         stage("Deploy"){
+            input {
+                message "Can we deploy?"
+                ok "Yes, of course"
+                submitter "pzn, abdl"
+            }
             steps {
                 echo "Hello Deploy 1"
                 sleep(5)
