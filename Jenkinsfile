@@ -7,10 +7,12 @@ pipeline {
     stages {
         stage("Hello Person") {
             steps {
-                hello.person([
-                    "firstName" : "Muhamad",
-                    "lastName" : "Abdul Aziz"
-                ])
+                script {
+                    hello.person([
+                        "firstName" : "Muhamad",
+                        "lastName" : "Abdul Aziz"
+                    ])
+                }
             }
         }
         stage("Maven Build") {
